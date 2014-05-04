@@ -6,7 +6,7 @@
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{EDAD31B2-152F-4B27-8B19-9135E1086A18}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AluminumBall</RootNamespace>
     <AssemblyName>AluminumBall</AssemblyName>
@@ -34,9 +34,11 @@
   <PropertyGroup>
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Entity.cs" />
-    <Compile Include="Game1.cs" />
+    <Compile Include="Gameplay.cs" />
     <Compile Include="GameState.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -62,15 +64,16 @@
       <Link>SDL.dll</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\circle.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Icon.ico" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Content\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AluminumBall.Components\AluminumBall.Components.csproj">
+    <ProjectReference Include="..\AluminumBall.Components\AluminumBall.ECS.csproj">
       <Project>{6a2d0538-b1fe-48a0-8e00-6a1e5fe885af}</Project>
-      <Name>AluminumBall.Components</Name>
+      <Name>AluminumBall.ECS</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -7,5 +7,6 @@ namespace AluminumBall.Components
 {
     public interface IComponent
     {
+        string GetName();
     }
 }

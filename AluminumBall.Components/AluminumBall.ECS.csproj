@@ -30,6 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MonoGame.Framework, Version=3.1.2.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -39,10 +40,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\Gravity.cs" />
+    <Compile Include="Components\Renderable.cs" />
+    <Compile Include="ECSManager.cs" />
+    <Compile Include="Entity.cs" />
     <Compile Include="IComponent.cs" />
-    <Compile Include="Spatial\Position.cs" />
+    <Compile Include="ILogicSystem.cs" />
+    <Compile Include="IGraphicSystem.cs" />
+    <Compile Include="Systems\GravitySystem.cs" />
+    <Compile Include="Systems\MovementSystem.cs" />
+    <Compile Include="Components\Position.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Components\Velocity.cs" />
+    <Compile Include="Systems\RenderSystem.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
