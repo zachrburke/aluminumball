@@ -1,16 +1,29 @@
 ﻿local color = { r = 0, g = 100, b = 100 }
+local trajectory = { x = 0, y = 0 }
 
-function Run (ticks)
-    SetBallColor(color.r, color.g, color.b)
-    color:Update()
+function incrementor(start, inc)
+	local value = start
+
+	return function()
+		value = value + inc
+		return value
+	end
 end
 
-function color.Update(self)
-	if (self.r > 250) then
-		self.r = 0
+local theta = incrementor(0, 0.50)
+
+function Run (ticks)
+    ChangeTrajectory(trajectory.x, trajectory.y)
+    trajectory:Update()
+end
+
+function trajectory.Update(self)
+	if (self.y > 1) then
+		self.y = -1
 	else
-		self.r = self.r + 10
+		self.y = math.sin(theta())
 	end
 end
 
 SetClearColor(color.r, color.g, color.b)
+SetBallColor(255, 255, 255)

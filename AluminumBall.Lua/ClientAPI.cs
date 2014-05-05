@@ -23,6 +23,7 @@ namespace AluminumBall.Lua
             _lua = new DynamicLua.DynamicLua();
             _lua.SetBallColor = new Action<double, double, double>(SetBallColor);
             _lua.SetClearColor = new Action<double, double, double>(SetClearcolor);
+            _lua.ChangeTrajectory = new Action<double, double>(ChangeTrajectory);
 
             _lua.DoFile(scriptPath);
         }
