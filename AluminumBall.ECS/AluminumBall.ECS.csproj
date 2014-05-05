@@ -7,8 +7,8 @@
     <ProjectGuid>{6A2D0538-B1FE-48A0-8E00-6A1E5FE885AF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AluminumBall.Components</RootNamespace>
-    <AssemblyName>AluminumBall.Components</AssemblyName>
+    <RootNamespace>AluminumBall.ECS</RootNamespace>
+    <AssemblyName>AluminumBall.ECS</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

@@ -70,7 +70,7 @@
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AluminumBall.Components\AluminumBall.ECS.csproj">
+    <ProjectReference Include="..\AluminumBall.ECS\AluminumBall.ECS.csproj">
       <Project>{6a2d0538-b1fe-48a0-8e00-6a1e5fe885af}</Project>
       <Name>AluminumBall.ECS</Name>
     </ProjectReference>

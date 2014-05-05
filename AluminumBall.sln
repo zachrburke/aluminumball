@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AluminumBall", "AluminumBall\AluminumBall.csproj", "{EDAD31B2-152F-4B27-8B19-9135E1086A18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AluminumBall.ECS", "AluminumBall.Components\AluminumBall.ECS.csproj", "{6A2D0538-B1FE-48A0-8E00-6A1E5FE885AF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AluminumBall.ECS", "AluminumBall.ECS\AluminumBall.ECS.csproj", "{6A2D0538-B1FE-48A0-8E00-6A1E5FE885AF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AluminumBall.Lua", "AluminumBall.Lua\AluminumBall.Lua.csproj", "{7AF2E2B5-CD94-4B8A-84D5-9C41B043CDC9}"
 EndProject
