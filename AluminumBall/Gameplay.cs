@@ -34,7 +34,11 @@ namespace AluminumBall
             GameState.AddEntity(new Entity()
                 .AddComponent(new Position(10f, 400f))
                 .AddComponent(new Renderable("circle"))
-                .AddComponent(new Velocity(0.1f, -0.1f)));
+                .AddComponent(new Velocity(0.3f, -0.7f))
+                .AddComponent(new Gravity(0.0098f))
+            );
+
+            ECSManager.InitClientAPI();
         }
 
         protected override void LoadContent()
@@ -61,12 +65,14 @@ namespace AluminumBall
                 }
             }
 
+            ECSManager.Run(gameTime);
+
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.SkyBlue);
+            GraphicsDevice.Clear(ECSManager.GetClearColor());
 
             var entities = new List<Entity>();
 

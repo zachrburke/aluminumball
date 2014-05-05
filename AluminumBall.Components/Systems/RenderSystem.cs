@@ -20,7 +20,7 @@ namespace AluminumBall.ECS.Systems
             var renderable = entity.Components["Renderable"] as Renderable;
 
             spriteBatch.Begin();
-            spriteBatch.Draw(ECSManager.Textures[renderable.TexName], position.Vector, Color.White);
+            spriteBatch.Draw(ECSManager.Textures[renderable.TexName], position.Vector, ECSManager.ClientAPI.BallColor);
             spriteBatch.End();
         }
     }

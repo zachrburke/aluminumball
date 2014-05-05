@@ -54,7 +54,12 @@
     <Compile Include="Components\Velocity.cs" />
     <Compile Include="Systems\RenderSystem.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\AluminumBall.Lua\AluminumBall.Lua.csproj">
+      <Project>{7af2e2b5-cd94-4b8a-84d5-9c41b043cdc9}</Project>
+      <Name>AluminumBall.Lua</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

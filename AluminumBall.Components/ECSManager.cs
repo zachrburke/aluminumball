@@ -1,4 +1,6 @@
-﻿using Microsoft.Xna.Framework.Graphics;
+﻿using AluminumBall.Lua;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +16,10 @@ namespace AluminumBall.ECS
 
         public static Dictionary<string, Texture2D> Textures { get; set; }
 
+        public static ClientAPI ClientAPI { get; set; }
+
+        private const string LuaMainPath = "Lua/script.lua";
+
         static ECSManager()
         {
             LogicSystems = Assembly.GetExecutingAssembly().GetTypes()
@@ -25,6 +31,21 @@ namespace AluminumBall.ECS
                 .Select(t => (IGraphicSystem)Activator.CreateInstance(t)).ToList();
 
             Textures = new Dictionary<string, Texture2D>();
+        }
+
+        public static void InitClientAPI() 
+        {
+            ClientAPI = new ClientAPI(LuaMainPath);
+        }
+
+        public static Color GetClearColor()
+        {
+            return ClientAPI.ClearColor;
+        }
+
+        public static void Run(GameTime gameTime)
+        {
+            ClientAPI.Run(gameTime.ElapsedGameTime.Milliseconds);
         }
     }
 }

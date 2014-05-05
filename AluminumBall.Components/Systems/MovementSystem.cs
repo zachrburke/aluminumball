@@ -20,6 +20,7 @@ namespace AluminumBall.ECS.Systems
             var velocity = entity.Components["Velocity"] as Velocity;
 
             position.Vector += velocity.Vector * gameTime.ElapsedGameTime.Milliseconds;
+            position.Vector += ECSManager.ClientAPI.Trajectory * gameTime.ElapsedGameTime.Milliseconds;
         }
     }
 }
