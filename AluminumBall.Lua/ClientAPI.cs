@@ -18,6 +18,7 @@ namespace AluminumBall.Lua
         public ClientAPI(string scriptPath)
         {
             ClearColor = Color.SkyBlue;
+            BallColor = Color.White;
             Trajectory = Vector2.Zero;
 
             _lua = new DynamicLua.DynamicLua();
